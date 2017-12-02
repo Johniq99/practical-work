@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practical work</title>
+</head>
+<body>
+
+<style>
+    body {
+        margin: 50px;
+        font-family: Arial, sans-serif;
+    }
+
+    .search {
+        padding: 10px;
+        margin-bottom: 10px;
+        max-width: 300px;
+        outline: none;
+        box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+        border: 1px solid #f5f5f5;
+    }
+
+    .suggestions {
+        display: block;
+        position: relative;
+        width: 300px;
+        max-height: 400px;
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border: 1px solid #f5f5f5;
+        box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+    }
+
+    .suggestions > li {
+        display: block;
+        padding: 10px;
+    }
+
+    .suggestions > div {
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        height: 400px;
+    }
+
+    .suggestions p {
+        padding: 0;
+        margin: 0 0 -1px 0;
+        font-size: 12px;
+        color: white;
+        text-align: center;
+        background-color: black;
+    }
+    .suggestions > li:not(:last-child) {
+        border-bottom: 1px solid #c9c9c9;
+    }
+
+    .tooltip {
+        position: relative;
+        display: block;
+    }
+
+    .tooltip > span {
+        top: -20px;
+        padding: 10px;
+        font-size: 10px;
+        position: absolute;
+        border-radius: 3px;
+        color: white;
+        background-color: black;
+    }
+</style>
+
+<h3 class="tooltip" data-tooltip="Practical work that has been made on lesson">Pss buddy, hover me</h3>
+
+<h1>Live search</h1>
+
+<input type="text" class="search" placeholder="Find country">
+<ul class="suggestions"></ul>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="counties.js"></script>
+<script src="liveSearch.js"></script>
+<script src="tooltip.js"></script>
+
+</body>
+</html>
